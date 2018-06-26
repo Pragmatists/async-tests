@@ -1,0 +1,21 @@
+{
+  "name": "async-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-jest": "*",
+    "babel-plugin-transform-runtime": "*",
+    "babel-preset-env": "*",
+    "jest": "^23.2.0"
+  },
+  "dependencies": {
+    "moment": "^2.22.2",
+    "rest": "^2.0.0"
+  }
+}
