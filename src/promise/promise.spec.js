@@ -9,10 +9,27 @@ function alsoFetchData() {
 }
 
 
-test('the fetchData is peanut butter', () => {
-
+test('promise testing with done', (done) => {
+    fetchData().then(data => {
+        expect(data).toEqual('peanut butter')
+        done()
+    })
 });
 
-test('the alsoFetchData is peanut butter', () => {
 
+test('promise testing with return', () => {
+    return fetchData().then(data => {
+        expect(data).toEqual('peanut butter')
+    })
+});
+
+test('another promise testing with return', () => {
+    return alsoFetchData().then(data => {
+        expect(data).toEqual('peanut butter')
+    })
+});
+
+test('testing with async await', async () => {
+    const data = await fetchData()
+    expect(data).toEqual('peanut butter')
 });

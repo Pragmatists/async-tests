@@ -5,11 +5,14 @@ function fetchData(callback) {
     }, 1000);
 }
 
-
-test('the data is peanut butter', () => {
-    function callback(data) {
-        expect(data).toBe('peanut butter');
-    }
-
-    fetchData(callback);
+describe('Name of the group', () => {
+    test('the data is peanut butter callback', (done) => {
+        function callback(data) {
+            expect(data).toBe('peanut butter');
+            done()
+        }
+    
+        fetchData(callback);
+    });
 });
+
